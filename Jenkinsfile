@@ -13,7 +13,7 @@ pipeline {
         }
         stage('Create Dockerimage') {
             steps {
-                sh "docker build -t anil/springboot:latest ."
+                sh "sudo docker build -t anil/springboot:latest ."
             }
         }
     }
