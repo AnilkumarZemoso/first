@@ -3,7 +3,7 @@ pipeline {
     stages {
         stage('Git clone') {
             steps {
-                git branch: 'main', url: 'https://github.com/AnilkumarZemoso/first.git'
+                git branch: 'master', url: 'https://github.com/AnilkumarZemoso/first.git'
             }
         }
         stage('Maven Test') {
