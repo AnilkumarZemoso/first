@@ -6,19 +6,14 @@ pipeline {
                 git branch: 'master', url: 'https://github.com/AnilkumarZemoso/first.git'
             }
         }
-        stage('Maven Test') {
-            steps {
-                sh "mvn test"
-            }
-        }
         stage('Maven Build') {
             steps {
                 sh "mvn package"
             }
         }
-        stage('Maven Deploy') {
+        stage('Create Dockerimage') {
             steps {
-                echo "Depoy war to sever"
+                sh "docker build -t anil/springboot:latest ."
             }
         }
     }
