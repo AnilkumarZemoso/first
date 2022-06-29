@@ -11,10 +11,5 @@ pipeline {
                 sh "mvn package"
             }
         }
-        stage('Create Dockerimage') {
-            steps {
-                sh "sudo docker build -t anil/springboot:latest ."
-            }
-        }
     }
 }
